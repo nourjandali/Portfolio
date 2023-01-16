@@ -20,12 +20,12 @@ const Projects = () => {
         </div>
         <p className="mt-4 text-[18px] text-[#001737] font-normal leading-[1.7em]">
           I developed the Frontend for a bank that features a user-friendly
-          design and showcases the bank's payment methods, active users, trusted
-          companies, and total transactions. The website also highlights the
-          benefits of using the bank's credit cards such as rewards, security,
-          and balance transfer options. Additionally, it includes a feature for
-          easily managing billing and invoicing, and a section displaying
-          customer testimonials ✌️
+          design and showcases the bank&apos;s payment methods, active users,
+          trusted companies, and total transactions. The website also highlights
+          the benefits of using the bank&apos;s credit cards such as rewards,
+          security, and balance transfer options. Additionally, it includes a
+          feature for easily managing billing and invoicing, and a section
+          displaying customer testimonials ✌️
         </p>
         <div className="mt-4 flex flex-row space-x-2 items-center justify-start hover:translate-x-1 duration-500">
           <svg

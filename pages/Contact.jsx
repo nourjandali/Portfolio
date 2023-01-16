@@ -6,12 +6,13 @@ const Contact = () => {
     <div className="max-w-[768px] mx-auto mb-32">
       <div className=" bg-[#001737]/[0.03] rounded-[20px] py-12 px-12 flex flex-col justify-start items-start">
         <h1 className="text-[24px] text-[#001737] font-bold tracking leading-none">
-          ✌️ Let's work together.
+          ✌️ Let&apos;s work together.
         </h1>
         <p className="mt-6">
-          I have been in the design industry for over 10 years, specialising in
-          UX design and product development. I'm currently available for design,
-          no-code and fun side projects.
+          As a front-end developer with good experience, I specialize in
+          creating visually appealing and user-friendly designs that enhance the
+          overall user experience and I am now available for any interesting
+          side projects that come my way.
         </p>
         <button className="mt-6 bg-[#001737] text-white px-[16px] py-[10px] rounded-[6px] flex justify-center items-center gap-2 hover:bg-[#001737]/75">
           Contact Me
