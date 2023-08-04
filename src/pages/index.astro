@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import { Image } from "@astrojs/image/components";
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-5xl font-bold">I'm Nour Jandali</div>
+    <div class="text-3xl py-3 font-bold">Software Engineer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Front-End Developer based in Bucharest, Romania. I enjoy creating things
+        that live on the internet, whether that be landing pages, web
+        applications, or anything in between. My goal is to always build
+        products that provide pixel-perfect, performant experiences.
+      </text>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Politehnica University of Bucharest"
+      subtitle="Diploma Degree in Romanian Language and Literature"
+      date="2018 - 2019"
+    />
+    <TimeLineElement
+      title="Politehnica University of Bucharest"
+      subtitle="Bachelor's Degree in Computer Science and Engineering"
+      date="2019 - 2023"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-14">
+    <TimeLineElement
+      title="Freelancer"
+      subtitle="Front-End Developer"
+      date="2021 - Present"
+    >
+      <ul class="list-none mb-5">
+        <li>Developed landing pages for clients using Upwork platform.</li>
+        <li class="font-semibold">
+          Technologies: HTML, TailwindCSS, Javascript, GatsbyJS, Astro
+        </li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Bytes & Bots"
+      subtitle="Intern Full-Stack Developer"
+      date="June 2022 — September 2022"
+    >
+      <ul class="list-none">
+        <li>
+          Developed students' check-in system for an educational center. The
+          system is used by students to check-in and check-out of the center.
+          The system is also used by the center's staff to manage students'
+          attendance.
+        </li>
+        <li class="font-semibold">
+          Technologies: HTML, CSS, JavaScript, jQuery, Python, Flask, Jinja,
+          PostgreSQL, Figma
+        </li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold mb-8 lg:mb-5">Technologies</div>
+  </div>
+
+  <div class="flex flex-row items-center gap-12 flex-wrap">
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/HTML.svg"
+      alt="HTML Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/CSS.svg"
+      alt="CSS Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/TailwindCSS.svg"
+      alt="TailwindCSS Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/JavaScript.svg"
+      alt="JavaScript Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/ReactJS.svg"
+      alt="React Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/Astro.svg"
+      alt="Astro Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/NextJS.svg"
+      alt="NextJS Logo"
+    />
+    <Image
+      class=""
+      format="svg"
+      width={50}
+      height={50}
+      src="/Prisma.svg"
+      alt="Prisma Logo"
+    />
+  </div>
+</BaseLayout>
