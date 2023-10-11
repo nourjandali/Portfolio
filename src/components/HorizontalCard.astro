@@ -1,5 +1,16 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const {
+  title,
+  img,
+  desc,
+  url,
+  badge,
+  tags,
+  target = "_blank",
+  readingTime,
+  datePublished,
+  isBlogPage,
+} = Astro.props;
 import { Image } from "@astrojs/image/components";
 ---
 
@@ -14,7 +25,7 @@ import { Image } from "@astrojs/image/components";
             src={img}
             aspectRatio="16:9"
             width={750}
-            format="webp"
+            format="jpeg"
             alt={title}
             class="max-w-full md:max-w-[13rem] rounded-lg"
           />
@@ -30,6 +41,50 @@ import { Image } from "@astrojs/image/components";
           {
             tags &&
               tags.map((tag) => <div class="badge badge-outline">{tag}</div>)
+          }
+        </div>
+        <div class="flex items-center justify-between mt-4">
+          {
+            isBlogPage && (
+              <>
+                <span class="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+                    />
+                  </svg>
+                  <p>{datePublished}</p>
+                </span>
+                <span class="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                      d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0 1 16 16v288a16 16 0 0 1-16 16c-128 0-177.45 25.81-208 64c-30.37-38-80-64-208-64c-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0 1 16-16c131.57.59 192 32.84 208 96Zm0 0v288"
+                    />
+                  </svg>
+                  <p>{readingTime}</p>
+                </span>
+              </>
+            )
           }
         </div>
       </div>

@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+
+const currentRoute = Astro.request.url.includes("/projects");
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div>
     <div class="text-3xl w-full font-bold mb-5">Projects</div>
   </div>
@@ -14,6 +16,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     desc="Developed a CRM software For Personal Trainers. The goal was to make it easy for personal trainers to manage their clients and their schedules and also to make it easy for clients to book sessions with their trainers. "
     url="https://easycoach.vercel.app"
     badge="POWERED BY AI"
+    isBlogPage={false}
   />
 
   <div class="divider my-0"></div>
@@ -23,5 +26,6 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/Gradientify.png"
     desc="A tool to generate Tailwind CSS gradients. It also has a feature to generate random gradients. Copy the Tailwind CSS code with a single click."
     url="https://gradientify-generator.vercel.app"
+    isBlogPage={false}
   />
 </BaseLayout>
